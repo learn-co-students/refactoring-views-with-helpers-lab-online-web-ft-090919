@@ -375,3 +375,17 @@ Processing by ArtistsController#show as HTML
   Parameters: {"id"=>"2"}
   Rendered artists/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "drake"], ["created_at", "2019-11-20 01:29:36.266982"], ["updated_at", "2019-11-20 01:29:36.266982"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("created_at", "updated_at", "artist_id") VALUES (?, ?, ?)[0m  [["created_at", "2019-11-20 01:29:36.270643"], ["updated_at", "2019-11-20 01:29:36.270643"], ["artist_id", 3]]
+  [1m[35m (298.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Dancing in the Rain"], ["created_at", "2019-11-20 01:30:53.066403"], ["updated_at", "2019-11-20 01:30:53.066403"]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Blu"], ["created_at", "2019-11-20 01:31:26.011487"], ["updated_at", "2019-11-20 01:31:26.011487"]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "songs" SET "updated_at" = ?, "artist_id" = ? WHERE "songs"."id" = ?[0m  [["updated_at", "2019-11-20 01:31:26.014012"], ["artist_id", 4], ["id", 4]]
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Jay Z and Kanye West"], ["created_at", "2019-11-20 01:33:28.475275"], ["updated_at", "2019-11-20 01:33:28.475275"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
